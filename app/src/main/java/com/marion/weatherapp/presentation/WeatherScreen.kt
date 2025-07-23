@@ -44,6 +44,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color.Companion.Black
 import androidx.compose.ui.graphics.Color.Companion.Blue
 import androidx.compose.ui.graphics.Color.Companion.LightGray
@@ -75,10 +76,11 @@ fun WeatherScreen(viewModel: WeatherViewModel) {
         containerColor = White,
         topBar = {
             TopAppBar(
+                modifier = Modifier.shadow(elevation = 12.dp, shape = RoundedCornerShape(4.dp)),
                 title = {
                     Text(
-                        text = "Weather App", color = White,
-                        fontSize = 18.sp
+                        text = "Weather App", color = Black,
+                        fontSize = 20.sp
                     )
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -154,7 +156,7 @@ fun ForecastContent(forecast: WeatherForecastResponse) {
             modifier = Modifier
                 .padding(16.dp)
                 .fillMaxWidth(0.92f),
-            color = White
+            color = Black
         )
         Box(
             Modifier
