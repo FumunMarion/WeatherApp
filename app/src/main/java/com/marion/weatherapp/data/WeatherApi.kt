@@ -1,8 +1,8 @@
 package com.marion.weatherapp.data
 
 import com.marion.weatherapp.BuildConfig
-import com.marion.weatherapp.domain.CurrentWeatherResponse
-import com.marion.weatherapp.domain.WeatherForecastResponse
+import com.marion.weatherapp.domain.model.CurrentWeatherResponse
+import com.marion.weatherapp.domain.model.WeatherForecastResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
