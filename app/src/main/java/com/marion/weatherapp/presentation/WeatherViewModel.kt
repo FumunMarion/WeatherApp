@@ -16,9 +16,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
-class WeatherViewModel(
+class WeatherViewModel @Inject constructor(
     private val getCurrentWeatherUseCase: GetCurrentWeatherUseCase,
     private val getFiveDayForecastUseCase: Fetch5DayForecastUseCase
 ) : ViewModel() {
