@@ -1,4 +1,4 @@
-package com.marion.weatherapp.domain
+package com.marion.weatherapp.domain.model
 
 data class WeatherForecastResponse(
     val city: City,
