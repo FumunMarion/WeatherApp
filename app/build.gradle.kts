@@ -70,13 +70,14 @@ dependencies {
 
     val navVersion = "2.9.2"
     implementation("androidx.navigation:navigation-compose:$navVersion")
+
     val retrofitVersion = "3.0.0"
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
-    implementation("com.squareup.okhttp3:okhttp:5.1.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:5.1.0")
+    implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.14")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
     implementation("com.google.code.gson:gson:2.13.1")
-
     implementation("io.coil-kt:coil-compose:2.7.0")
 
     val hiltVersion = "2.50"
