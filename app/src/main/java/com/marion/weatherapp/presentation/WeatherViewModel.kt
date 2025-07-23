@@ -24,6 +24,10 @@ class WeatherViewModel @Inject constructor(
     private val getFiveDayForecastUseCase: Fetch5DayForecastUseCase
 ) : ViewModel() {
 
+    init {
+        getFiveDayForecast(city = "Miami")
+    }
+
     private val _currentWeatherState = MutableStateFlow<Resource<CurrentWeatherResponse>>(Idle())
     val currentWeatherState = _currentWeatherState.asStateFlow()
 
