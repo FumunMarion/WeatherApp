@@ -1,6 +1,8 @@
 package com.marion.weatherapp.di
 
 import com.marion.weatherapp.data.WeatherApi
+import com.marion.weatherapp.domain.repository.WeatherRepository
+import com.marion.weatherapp.domain.repository.WeatherRepositoryImpl
 import com.marion.weatherapp.util.OPENWEATHERMAP_BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -14,6 +16,13 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 @Module
 object AppModule {
+
+    @Provides
+    @Singleton
+    fun provideWeatherRepository(
+        api: WeatherApi
+    ): WeatherRepository =
+        WeatherRepositoryImpl(api)
 
     @Provides
     @Singleton
