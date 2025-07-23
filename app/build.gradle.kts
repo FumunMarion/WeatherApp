@@ -29,6 +29,13 @@ android {
                 "proguard-rules.pro"
             )
         }
+        getByName("debug") {
+            buildConfigField(
+                "String",
+                "OPENWEATHERMAP_API_KEY",
+                "\"${project.properties["OPENWEATHERMAP_API_KEY"]}\""
+            )
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
